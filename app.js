@@ -9,16 +9,8 @@ const argv = require('yargs')
         default: 10
     }
 })
-.command('crear','Crea un archivo con la tabla de multiplicar',{
-    base:  {
-        demand: true,
-        alias: 'b' 
-    },
-    limite: {
-        alias: '1',
-        default: 10
-    }
-})
+
+.help()
 .argv;
 const multiplicar = require('./multiplicacion/multiplicacion');
 let comando = argv._[0];
